@@ -123,6 +123,7 @@ set(HEADER_FILES
     ${IVW_INCLUDE_DIR}/inviwo/core/interaction/events/touchstate.h
     ${IVW_INCLUDE_DIR}/inviwo/core/interaction/events/viewevent.h
     ${IVW_INCLUDE_DIR}/inviwo/core/interaction/events/wheelevent.h
+    ${IVW_INCLUDE_DIR}/inviwo/core/interaction/eventtransformer.h
     ${IVW_INCLUDE_DIR}/inviwo/core/interaction/interactionhandler.h
     ${IVW_INCLUDE_DIR}/inviwo/core/interaction/pickingaction.h
     ${IVW_INCLUDE_DIR}/inviwo/core/interaction/pickingcontroller.h
@@ -510,6 +511,7 @@ set(SOURCE_FILES
     interaction/events/touchstate.cpp
     interaction/events/viewevent.cpp
     interaction/events/wheelevent.cpp
+    interaction/eventtransformer.cpp
     interaction/interactionhandler.cpp
     interaction/pickingaction.cpp
     interaction/pickingcontroller.cpp
@@ -783,6 +785,7 @@ set(TEST_FILES
     tests/unittests/dispatch-test.cpp
     tests/unittests/document-test.cpp
     tests/unittests/enumoptionproperty-test.cpp
+    tests/unittests/eventtransformer-test.cpp
     tests/unittests/glm-test.cpp
     tests/unittests/image-tests.cpp
     tests/unittests/indirectiterator-tests.cpp
