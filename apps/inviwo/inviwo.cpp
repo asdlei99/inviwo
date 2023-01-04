@@ -55,6 +55,12 @@
 #include <QMessageBox>
 #include <QApplication>
 
+#ifdef REG_INVIWOPYTHON3MODULE
+#ifndef INVIWO_ALL_DYN_LINK
+#include <inviwopy/inviwopy.h>
+#endif
+#endif
+
 int main(int argc, char** argv) {
     inviwo::util::configureCodePage();
 
@@ -101,6 +107,12 @@ int main(int argc, char** argv) {
     inviwo::util::registerModulesFiltered(inviwoApp.getModuleManager(), filter,
                                           inviwoApp.getSystemSettings().moduleSearchPaths_.get(),
                                           clp.getModuleSearchPaths());
+
+#ifdef REG_INVIWOPYTHON3MODULE
+#ifndef INVIWO_ALL_DYN_LINK
+    inviwo::initInviwoPy();
+#endif
+#endif
 
     qtApp.processEvents();
 
