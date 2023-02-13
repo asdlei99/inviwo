@@ -37,6 +37,7 @@
 #include <inviwo/core/util/glmvec.h>                // for uvec3, ivec2
 #include <inviwo/core/datastructures/transferfunction.h>
 #include <modules/opengl/shader/shaderutils.h>
+#include <inviwo/core/properties/isotfproperty.h>
 
 #include <functional>  // for function
 #include <string>      // for string
@@ -86,7 +87,7 @@ public:
     virtual Rasterization* clone() const = 0;
 
     struct RaycastingState {
-        TransferFunction tf;
+        IsoTFProperty tf;  // property instead?
         LightingState lighting;
         int channel;
         std::shared_ptr<const Volume> volume;
