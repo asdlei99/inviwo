@@ -80,16 +80,11 @@ public:
      */
     virtual Document getInfo() const;
 
-    /**
-     * \brief Get a copy of the object. Ownership goes to the caller.
-     * @return A copy with the same data and type as the original.
-     */
-    virtual Rasterization* clone() const = 0;
-
     struct RaycastingState {
-        IsoTFProperty tf;  // property instead?
+        IsoTFProperty tf;
         LightingState lighting;
         int channel;
+        float opacityScaling;
         std::shared_ptr<const Volume> volume;
     };
     virtual const RaycastingState* getRaycastingState() const;
