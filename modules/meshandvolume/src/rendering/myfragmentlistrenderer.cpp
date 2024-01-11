@@ -154,10 +154,10 @@ bool MyFragmentListRenderer::postPass(bool useIllustration, const Image* backgro
         display_.activate();
         setUniforms(display_, textureUnits_[0]);
         LGL_ERROR;
-        
+
         setUniformsCallback(display_);
         LGL_ERROR;
-        
+
         if (builtWithBackground_) {
             // Set depth buffer to read from.
             utilgl::bindAndSetUniforms(display_, textureUnits_, *background, "bg",

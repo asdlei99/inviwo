@@ -77,7 +77,7 @@ private:
 
     Image intermediateImage_;
 
-    CompositeProperty raycastingProps_; 
+    CompositeProperty raycastingProps_;
     FloatProperty samplingDistance_;
     CameraProperty camera_;
     CameraTrackball trackball_;

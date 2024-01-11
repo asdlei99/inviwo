@@ -34,7 +34,8 @@
 
 namespace inviwo {
 
-MeshAndVolumeModule::MeshAndVolumeModule(InviwoApplication* app) : InviwoModule(app, "MeshAndVolume") {
+MeshAndVolumeModule::MeshAndVolumeModule(InviwoApplication* app)
+    : InviwoModule(app, "MeshAndVolume") {
     // Add a directory to the search path of the Shadermanager
     ShaderManager::getPtr()->addShaderSearchPath(getPath(ModulePath::GLSL));
 
@@ -58,8 +59,8 @@ MeshAndVolumeModule::MeshAndVolumeModule(InviwoApplication* app) : InviwoModule(
     // Ports
     // registerPort<MeshAndVolumeOutport>();
     // registerPort<MeshAndVolumeInport>();
-    //registerPort<RasterizationInport>();
-    //registerPort<RasterizationOutport>();
+    // registerPort<RasterizationInport>();
+    // registerPort<RasterizationOutport>();
 
     // PropertyWidgets
     // registerPropertyWidget<MeshAndVolumePropertyWidget, MeshAndVolumeProperty>("Default");
@@ -72,8 +73,8 @@ MeshAndVolumeModule::MeshAndVolumeModule(InviwoApplication* app) : InviwoModule(
     // registerSettings(std::make_unique<MeshAndVolumeSettings>());
     // registerMetaData(std::make_unique<MeshAndVolumeMetaData>());
     // registerPortInspector("MeshAndVolumeOutport", "path/workspace.inv");
-    // registerProcessorWidget(std::string processorClassName, std::unique_ptr<ProcessorWidget> processorWidget); 
-    // registerDrawer(util::make_unique_ptr<MeshAndVolumeDrawer>());
+    // registerProcessorWidget(std::string processorClassName, std::unique_ptr<ProcessorWidget>
+    // processorWidget); registerDrawer(util::make_unique_ptr<MeshAndVolumeDrawer>());
 }
 
 }  // namespace inviwo
